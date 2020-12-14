@@ -23,7 +23,6 @@ phases:
   install:
     runtime-versions:
       docker: 19
-      java: openjdk8
     # commands:
     #   - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
     #   - unzip awscliv2.zip
