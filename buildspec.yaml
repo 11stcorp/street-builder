@@ -35,13 +35,11 @@ phases:
   build:
     commands:
       - docker build -t 446804614856.dkr.ecr.ap-northeast-2.amazonaws.com/street-builder:${TAG_NAME} .
-      - docker push 446804614856.dkr.ecr.ap-northeast-2.amazonaws.com/street-builder:${TAG_NAME}
       # - docker build -t public.ecr.aws/p5d8w6d9/street-builder:${TAG_NAME} .
       # - docker push public.ecr.aws/p5d8w6d9/street-builder:${TAG_NAME}
-  #post_build:
-    #commands:
-      # - command
-      # - command
+  post_build:
+    commands:
+      - docker push 446804614856.dkr.ecr.ap-northeast-2.amazonaws.com/street-builder:${TAG_NAME}
 #reports:
   #report-name-or-arn:
     #files:
